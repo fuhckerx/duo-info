@@ -11,8 +11,8 @@ urllib3.disable_warnings()
 app = Flask(__name__)
 
 # ── Config ──────────────────────────────────────────
-GUEST_UID      = "4793211806"
-GUEST_PASSWORD = "FuhX_FF_95D3"
+GUEST_UID      = "4852597140"
+GUEST_PASSWORD = "FuhX_FF_QXPP"
 AeSkEy         = b'Yg&tc%DEuh6%Zc^8'
 AeSiV          = b'6oyZDr22E3ychjM%'
 BASE_URL       = "https://clientbp.ggpolarbear.com"
@@ -49,7 +49,7 @@ def format_timestamp(ts):
 
 
 def fetch_jwt_token() -> str | None:
-    url = f"https://spidey-jwt-gen.vercel.app/guest?uid={GUEST_UID}&password={GUEST_PASSWORD}"
+    url = f"https://ff-jwt-gen-api.lovable.app/api/public/token?uid={GUEST_UID}&password={GUEST_PASSWORD}"
     try:
         r = requests.get(url, timeout=15)
         if r.status_code == 200:
@@ -193,9 +193,10 @@ def index():
         "version": "1.0",
         "usage":   "/info?uid=YOUR_UID",
         "example": "/info?uid=2355294066",
-        "author":  "@RIZERX64 AND F X FuhX"
+        "author":  "@ F X FuhX"
     })
 
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=False)
+    
